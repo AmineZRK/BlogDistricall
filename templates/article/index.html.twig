@@ -1,0 +1,17 @@
+{# templates/article/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Articles</h1>
+
+    <ul>
+        {% for article in articles %}
+            <li>
+                <a href="{{ path('article_show', {'id': article.id}) }}">{{ article.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ path('article_new') }}">Create a new article</a>
+{% endblock %}

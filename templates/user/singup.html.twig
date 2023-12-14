@@ -1,0 +1,16 @@
+{# templates/user/signup.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Signup</h2>
+
+    <form method="post">
+        {{ form_row(form.email) }}
+        {{ form_row(form.age) }}
+        {{ form_row(form.sex) }}
+        {{ form_row(form.plainPassword) }}
+
+        <button type="submit">Signup</button>
+    </form>
+{% endblock %}

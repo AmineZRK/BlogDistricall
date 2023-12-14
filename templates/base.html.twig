@@ -15,5 +15,8 @@
     </head>
     <body>
         {% block body %}{% endblock %}
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <a href="{{ path('app_logout') }}">Logout</a>
+        {% endif %}
     </body>
 </html>

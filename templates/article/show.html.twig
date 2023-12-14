@@ -1,0 +1,12 @@
+{# templates/article/show.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>{{ article.name }}</h1>
+    <p>{{ article.description }}</p>
+    <p>{{ article.content }}</p>
+    <p>Author: {{ article.user.email }}</p>
+
+    <a href="{{ path('article_index') }}">Back to articles</a>
+{% endblock %}
